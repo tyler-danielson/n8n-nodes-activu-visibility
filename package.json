@@ -1,0 +1,50 @@
+{
+  "name": "n8n-nodes-activu-visibility",
+  "version": "0.1.0",
+  "description": "n8n node for Activu Visibility REST API integration",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "activu",
+    "visibility",
+    "video-wall"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tyler-danielson/n8n-nodes-activu-visibility",
+  "author": {
+    "name": "Tyler Danielson",
+    "email": "tyler.danielson@activu.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyler-danielson/n8n-nodes-activu-visibility.git"
+  },
+  "engines": {
+    "node": ">=22.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "dev": "n8n-node dev",
+    "build": "n8n-node build",
+    "build:watch": "n8n-node build --watch",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/ActivuVisibilityApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/ActivuVisibility/ActivuVisibility.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "latest",
+    "n8n-workflow": "latest"
+  }
+}
